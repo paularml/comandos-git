@@ -132,7 +132,7 @@
                             <code class="language-bash">
                                 git log <br>
                             </code> <br>
-                            # Listar o histórico de commits, com os respectivos IDs (de forma mais resumida):
+                            # Listar o histórico de commits (de forma mais resumida):
                             <br>
                             <code class="language-bash">
                                 git log-oneline <br>
@@ -142,16 +142,11 @@
                             <code class="language-bash">
                                 git diff commit1_ID commit2_ID <br>
                             </code> <br>
-                            # Envia as modificações para o repositório remoto:
+                            # Remove o arquivo do stage:
                             <br>
                             <code class="language-bash">
-                                git push origin nome_da_branch <br>
-                            </code> <br>
-                            # Envia as modificações para o repositório remoto:
-                            <br>
-                            <code class="language-bash">
-                                git push origin nome_da_branch <br>
-                            </code> <br>
+                                git reset nome_do_arquivo
+                            </code>
                         </p>
                     </div>
                 </div>
@@ -164,9 +159,45 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white">Misty</h4>
-                                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
-                                    anything else, along with a description.</p>
+                                <h4 class="text-white">Branch</h4>
+                                <p class="mb-0 text-white-50">
+                                    # Lista todas as branchs locais:
+                                    <br>
+                                    <code class="language-bash">
+                                        git branch <br>
+                            </code> <br>
+                                    # Criando uma branch
+                                    <br>
+                                    <code class="language-bash">
+                                        git branch nome_da_branch <br>
+                            </code> <br>
+                                    # Mudando para uma branch:
+                                    <br>
+                                    <code class="language-bash">
+                                        git checkout nome_da_branch <br>
+                            </code> <br>
+                                    # Criar uma nova branch e mudar para ela:
+                                    <br>
+                                    <code class="language-bash">
+                                        git checkout -b nome_da_branch <br>
+                            </code> <br>
+                                    # Mesclar (mergear) duas branchs (a branch em que você está será mergeada com
+                                    outra):
+                                    <br>
+                                    <code class="language-bash">
+                                        git merge nome_da_branch <br>
+                            </code> <br>
+                                    # Excluir uma branch local:
+                                    <br>
+                                    <code class="language-bash">
+                                git branch -d nome_da_branch <br>
+                            </code> <br>
+                                    # Excluir uma branch remota:
+                                    <br>
+                                    <code class="language-bash">
+                                git push origin --delete nome_da_branch
+                            </code>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -180,9 +211,39 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-white">Mountains</h4>
-                                <p class="mb-0 text-white-50">Another example of a project with its respective
-                                    description. These sections work well responsively as well!</p>
+                                <h4 class="text-white">Revertendo (CUIDADO!)</h4>
+                                <p class="mb-0 text-white-50">
+                                    # Remove o arquivo do stage:
+                                    <br>
+                                    <code class="language-bash">
+                                        git reset nome_do_arquivo <br>
+                            </code> <br>
+                                    # Remover um arquivo da área de trabalho apenas:
+                                    <br>
+                                    <code class="language-bash">
+                                        git rm-cached nome_do_arquivo <br>
+                            </code> <br>
+                                    # Remover um arquivo da área de trabalho e da área de preparação (stage):
+                                    <br>
+                                    <code class="language-bash">
+                                        git rm nome_do_arquivo <br>
+                            </code> <br>
+                                    # Criar um novo commit, revertendo as alterações de um commit especificado::
+                                    <br>
+                                    <code class="language-bash">
+                                        git revert commit_ID <br>
+                            </code> <br>
+                                    # Voltar para um commit anterior e excluir todos os commits à frente dele:
+                                    <br>
+                                    <code class="language-bash">
+                                        git reset commit_ID <br>
+                            </code> <br>
+                                    # Permite excluir e/ou alterar o número de commits específicados (nesse caso 3):
+                                    <br>
+                                    <code class="language-bash">
+                                        git rebase -i Head~3
+                            </code>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -195,9 +256,34 @@
                     <div class="bg-black text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-white">Misty</h4>
-                                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
-                                    anything else, along with a description.</p>
+                                <h4 class="text-white">Extras</h4>
+                                <p class="mb-0 text-white-50">
+                                    # Conectando seu repositório local a um repositório remoto:
+                                    <br>
+                                    <code class="language-bash">
+                                        git remote add origin url_ssh_ou_https <br>
+                            </code> <br>
+                                    # Para ver todas as conexões remotas:
+                                    <br>
+                                    <code class="language-bash">
+                                        git remote <br>
+                            </code> <br>
+                                    # Remover uma conexão::
+                                    <br>
+                                    <code class="language-bash">
+                                        git remote remove url_ssh_ou_https_da_conexão <br>
+                            </code> <br>
+                                    # Pegar todas as branches do repositório remoto sem mergear:
+                                    <br>
+                                    <code class="language-bash">
+                                        git fetch <br>
+                            </code> <br>
+                                    # Pegar uma branch específica do repostório remoto sem mergear:
+                                    <br>
+                                    <code class="language-bash">
+                                        git fetch nome_da_branch
+                            </code>
+                                </p>
                             </div>
                         </div>
                     </div>
