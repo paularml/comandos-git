@@ -12778,7 +12778,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #000;
 }
 
 #mainNav .navbar-toggler {
@@ -12793,7 +12793,7 @@ body {
 }
 
 #mainNav .navbar-brand {
-  color: #000;
+  color: #fff;
   font-weight: 700;
   padding: 0.9rem 0;
 }
