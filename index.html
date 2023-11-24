@@ -74,6 +74,41 @@
                         <code class="language-bash">
                             git clone url_ssh_ou_https <br>
                         </code> <br>
+                        # Lista modificações nos arquivos (útil para ver o que precisa ir para o stage ou o que já foi):
+                        <br>
+                        <code class="language-bash">
+                            git status <br>
+                        </code> <br>
+                        # Para adicionar um arquivo específico ao stage:
+                        <br>
+                        <code class="language-bash">
+                            git add nome_do_arquivo <br>
+                        </code> <br>
+                        # Para adicionar todos os arquivos ao stage:
+                        <br>
+                        <code class="language-bash">
+                            git add . <br>
+                        </code> <br>
+                        # Commitando as alterações:
+                        <br>
+                        <code class="language-bash">
+                            git commit -m "Mensagem do commit" <br>
+                        </code> <br>
+                        # Envia as modificações para o repositório remoto:
+                        <br>
+                        <code class="language-bash">
+                            git push origin nome_da_branch <br>
+                        </code> <br>
+                        # Adiciona todas as mudanças feitas em arquivos trackeados ao stage e commita:
+                        <br>
+                        <code class="language-bash">
+                            git commit -am "Mensaem do commit" <br>
+                        </code> <br>
+                        # Puxa alterações de um repositório remoto para seu repositório local:
+                        <br>
+                        <code class="language-bash">
+                            git pull origin nome_da_branch <br>
+                        </code> <br>
                     </p>
                 </div>
             </div>
@@ -90,10 +125,34 @@
                         alt="..." /></div>
                 <div class="col-xl-4 col-lg-5">
                     <div class="featured-text text-center text-lg-left">
-                        <h4>Shoreline</h4>
-                        <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use
-                            it for any project - even commercial projects! Download it, customize it, and publish your
-                            website!</p>
+                        <h4>Histórico de commits</h4>
+                        <p class="text-black-50 mb-0">
+                            # Lista histórico de commits
+                            <br>
+                            <code class="language-bash">
+                                git log <br>
+                            </code> <br>
+                            # Listar o histórico de commits, com os respectivos IDs (de forma mais resumida):
+                            <br>
+                            <code class="language-bash">
+                                git log-oneline <br>
+                            </code> <br>
+                            # Mostrar alterações entre dois commits:
+                            <br>
+                            <code class="language-bash">
+                                git diff commit1_ID commit2_ID <br>
+                            </code> <br>
+                            # Envia as modificações para o repositório remoto:
+                            <br>
+                            <code class="language-bash">
+                                git push origin nome_da_branch <br>
+                            </code> <br>
+                            # Envia as modificações para o repositório remoto:
+                            <br>
+                            <code class="language-bash">
+                                git push origin nome_da_branch <br>
+                            </code> <br>
+                        </p>
                     </div>
                 </div>
             </div>
