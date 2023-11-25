@@ -244,6 +244,17 @@
                                     <code class="language-bash">
                                         git reset commit_ID <br>
                             </code> <br>
+                                    # Recupera arquivos excluídos (exclusão não commitada):
+                                    <br>
+                                    <code class="language-bash">
+                                        git checkout -- nome_do_arquivo <br>
+                            </code> <br>
+                                    # Recupera arquivos excluídos (versão commitada, após o uso é necessário usar o
+                                    comando acima):
+                                    <br>
+                                    <code class="language-bash">
+                                        git reset HEAD nome_do_arquivo <br>
+                            </code> <br>
                                     # Permite excluir e/ou alterar o número de commits específicados (nesse caso 3):
                                     <br>
                                     <code class="language-bash">
@@ -293,17 +304,6 @@
                                     <br>
                                     <code class="language-bash">
                                         git diff <br>
-                            </code> <br>
-                                    # Recupera arquivos excluídos (exclusão não commitada):
-                                    <br>
-                                    <code class="language-bash">
-                                        git checkout -- nome_do_arquivo <br>
-                            </code> <br>
-                                    # Recupera arquivos excluídos (versão commitada, após o uso é necessário usar o
-                                    comando acima):
-                                    <br>
-                                    <code class="language-bash">
-                                        git reset HEAD nome_do_arquivo <br>
                             </code> <br>
                                     # Abre o arquivo especificado no seu editor de códigos:
                                     <br>
