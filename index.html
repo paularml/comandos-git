@@ -294,11 +294,16 @@
                                     <code class="language-bash">
                                         git diff <br>
                             </code> <br>
-                                    # atualiza os arquivos na árvore de trabalho para que correspondam à versão
-                                    especificada:
+                                    # Recupera arquivos excluídos (exclusão não commitada):
                                     <br>
                                     <code class="language-bash">
                                         git checkout -- nome_do_arquivo <br>
+                            </code> <br>
+                                    # Recupera arquivos excluídos (versão commitada, após o uso é necessário usar o
+                                    comando acima):
+                                    <br>
+                                    <code class="language-bash">
+                                        git reset HEAD nome_do_arquivo <br>
                             </code> <br>
                                     # Abre o arquivo especificado no seu editor de códigos:
                                     <br>
